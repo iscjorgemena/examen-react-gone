@@ -1,3 +1,14 @@
+$color-card-slytherin :linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
+$color-card-ravenclaw :linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
+$color-card-hufflepuff:linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
+$color-card-gryfindor :linear-gradient(135deg, #FF0000 0%, #FED482 100%);
+
+$color-bg-buttons-normal:rgba(0, 0, 0, 0.6);
+$color-bg-buttons-hover : rgba(107, 99, 181, 0.6);
+$color-bg-buttons-active: #6B63B5;
+$border-buttons-radius  : 4px;
+
+//Estilos base
 html,
 body {
   padding: 0;
@@ -13,6 +24,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  /* or inline-flex */
 }
 
 @media (prefers-color-scheme: dark) {
