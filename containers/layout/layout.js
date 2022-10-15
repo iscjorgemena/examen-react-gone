@@ -8,7 +8,7 @@ const Layout = (props) => {
             <Head>
                 <title>Examen GoNet</title>
             </Head>
-            <main >
+            <main className='container' >
                 <Header />
                 <div>{children}</div>
                 <Footer />

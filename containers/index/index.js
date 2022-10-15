@@ -3,7 +3,7 @@ const Index = () => {
 
     return (
         <Layout >
-            proyecto
+            Proyecto
         </Layout>
     )
 }
