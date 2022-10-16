@@ -19,7 +19,7 @@ const Index = () => {
             </div>
             <div className="flex-container">
                 <div className="item">
-                    <Button label={'estudiantes'} action={getStudents} />
+                    <Button className='btn-active' label={'estudiantes'} action={getStudents} />
                 </div>
                 <div className="item">
                     <Button label={'staff'} action={getStaff} />

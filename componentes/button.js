@@ -1,7 +1,7 @@
 const Button = (props) => {
-    let { label, action } = props;
+    let { label, action, className } = props;
     return (
-        <button className="btn-default" onClick={() => { action }} >{label}</button>
+        <button className={`btn-default ${className || ""}`} onClick={() => { action }} >{label}</button>
     )
 }
 
