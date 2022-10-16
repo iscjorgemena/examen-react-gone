@@ -8,6 +8,10 @@ $color-card-hufflepuff:linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
 $color-card-gryfindor :linear-gradient(135deg, #FF0000 0%, #FED482 100%);
 
 //Buttons
+$width-buttons          : 288px;
+$height-buttons         : 67px;
+$border-buttons         : 4px solid #6B63B5;
+$color-buttons          : #fff;
 $color-bg-buttons-normal:rgba(0, 0, 0, 0.6);
 $color-bg-buttons-hover : rgba(107, 99, 181, 0.6);
 $color-bg-buttons-active: #6B63B5;
@@ -18,7 +22,7 @@ html,
 body {
   padding: 0;
   margin : 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system, 'Open Sans', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -43,10 +47,45 @@ a {
 }
 
 .flex-container {
-  display         : flex;
-  background-color: DodgerBlue;
-  flex-wrap       : wrap
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: center
     /* or inline-flex */
+}
+
+.item {
+  margin: 10px;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight   : bold;
+  font-size     : 17px;
+  cursor        : pointer;
+}
+
+.btn-default {
+  width           : $width-buttons;
+  height          : $height-buttons;
+  border          : $border-buttons;
+  background-color: $color-bg-buttons-normal;
+  color           : $color-buttons;
+}
+
+.btn-default:hover {
+  width           : $width-buttons;
+  height          : $height-buttons;
+  border          : $border-buttons;
+  background-color: $color-bg-buttons-hover;
+  color           : $color-buttons;
+}
+
+.btn-default:active {
+  width           : $width-buttons;
+  height          : $height-buttons;
+  border          : $border-buttons;
+  background-color: $color-bg-buttons-active;
+  color           : $color-buttons;
 }
 
 
