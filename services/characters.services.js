@@ -8,7 +8,7 @@ const CharactersServices = {
      * @returns 
      */
     get: async (params) => {
-        const response = await API.get(url_module, params);
+        const response = await API.get(url_module, { params: params });
         return response;
     },
 };

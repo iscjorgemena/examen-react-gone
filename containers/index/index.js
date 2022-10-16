@@ -4,10 +4,13 @@ import Image from 'next/image'
 import Button from "../../componentes/button";
 import CharactersServices from "../../services/characters.services";
 import Helpers from "../../utils/helpers";
+import { Spin } from 'antd';
+import Card from "./components/card";
 
 const Index = () => {
 
     const [List, setList] = useState([]);
+    const [loadingData, setLoadingData] = useState(true);
     const [typeList, setTypeList] = useState('students')
 
     useEffect(() => {
@@ -21,16 +24,18 @@ const Index = () => {
      * Pido el listado pero antes genero los parametros
      * @param {*} type_list 
      */
-    const getList = (type_list) => {
+    const getList = async (type_list) => {
+        setLoadingData(true);
         let params = generateParams(type_list);
-        CharactersServices.get(params)
+        await CharactersServices.get(params)
             .then(response => {
-                console.log(response);
+                setList(response.data);
             })
             .catch(error => {
                 console.log(error);
                 Helpers.showNotification('error', 'Ha ocurrido un error', 'Vuelve a intentarlo', 5000);
             })
+        setLoadingData(false);
     }
 
     /**
@@ -67,6 +72,19 @@ const Index = () => {
                 <div className="item">
                     <Button label={'staff'} onClick={() => { setTypeList('staff') }} />
                 </div>
+            </div>
+            <div className="flex-container">
+                {loadingData == true ?
+                    <div className="item">
+                        <Spin size="large" />
+                    </div>
+                    :
+                    <div className="list-card">
+                        {List.map((data, index) => {
+                            return <Card key={index} data={data} />
+                        })}
+                    </div>
+                }
             </div>
         </Layout >
     )
