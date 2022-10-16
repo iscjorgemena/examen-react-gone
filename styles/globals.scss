@@ -1,0 +1,148 @@
+$bg-color:#000;
+$bg-image:'/images/background.png';
+
+//Cards
+$color-card-slytherin :linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
+$color-card-ravenclaw :linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
+$color-card-hufflepuff:linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
+$color-card-gryfindor :linear-gradient(135deg, #FF0000 0%, #FED482 100%);
+
+//Buttons
+$width-buttons          : 288px;
+$height-buttons         : 67px;
+$border-buttons         : 4px solid #6B63B5;
+$color-buttons          : #fff;
+$color-bg-buttons-normal:rgba(0, 0, 0, 0.6);
+$color-bg-buttons-hover : rgba(107, 99, 181, 0.6);
+$color-bg-buttons-active: #6B63B5;
+$border-buttons-radius  : 4px;
+
+//Estilos base
+html,
+body {
+  padding: 0;
+  margin : 0;
+  font-family: -apple-system, 'Open Sans', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color          : inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width              : 100%;
+  height             : auto;
+  min-height         : 10000px;
+  background-color   : $bg-color;
+  background-image   : url($bg-image);
+  background-repeat  : no-repeat;
+  background-position: top;
+  background-size    : 100%;
+}
+
+.flex-container {
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: center
+    /* or inline-flex */
+}
+
+.item {
+  margin: 10px;
+}
+
+button {
+  text-transform: uppercase !important;
+  font-weight   : bold;
+  font-size     : 17px;
+  cursor        : pointer;
+}
+
+.btn-default {
+  width           : $width-buttons;
+  height          : $height-buttons;
+  border          : $border-buttons;
+  background-color: $color-bg-buttons-normal;
+  color           : $color-buttons;
+
+
+}
+
+
+.btn-default:hover {
+  width           : $width-buttons;
+  height          : $height-buttons;
+  border          : $border-buttons;
+  background-color: $color-bg-buttons-hover;
+  color           : $color-buttons;
+}
+
+.btn-active {
+  width           : $width-buttons;
+  height          : $height-buttons;
+  border          : $border-buttons;
+  background-color: $color-bg-buttons-active;
+  color           : $color-buttons;
+}
+
+.list-card {
+  margin         : auto;
+  width          : 70%;
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: center;
+
+  .item-card:nth-child(2n) {
+    margin-left: 47px;
+  }
+
+  .item-card {
+    width        : 515px;
+    height       : 265px;
+    background   : #FFFFFF;
+    border       : 1px solid #000000;
+    border-radius: 16px;
+    filter       : drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.04));
+    margin-bottom: 51px;
+
+    .image {
+      width        : 220px;
+      height       : 100%;
+      border-radius: 16px 0px 0px 16px;
+    }
+
+    .image-Gryffindor {
+      background: $color-card-gryfindor;
+    }
+
+    .image-Slytherin {
+      background: $color-card-slytherin;
+    }
+
+    .image-Hufflepuff {
+      background: $color-card-hufflepuff;
+    }
+
+    .image-Ravenclaw {
+      background: $color-card-ravenclaw;
+    }
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color     : white;
+    background: black;
+  }
+}

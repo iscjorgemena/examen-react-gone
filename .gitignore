@@ -5,3 +5,5 @@ data/
 .vscode/
 .next/
 yarn.lock
+.env.local
+.env
