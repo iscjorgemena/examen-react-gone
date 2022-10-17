@@ -1,9 +1,10 @@
+import MenuHeader from "../index/components/menu";
 
 const Header = (props) => {
 
     return (
         <header>
-           header
+            <MenuHeader />
         </header>
     )
 }
