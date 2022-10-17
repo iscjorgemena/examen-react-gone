@@ -11,7 +11,7 @@ const Index = () => {
 
     const [List, setList] = useState([]);
     const [loadingData, setLoadingData] = useState(true);
-    const [typeList, setTypeList] = useState('students')
+    const [typeList, setTypeList] = useState('')
 
     useEffect(() => {
         getList(typeList)
