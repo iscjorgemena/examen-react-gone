@@ -1,4 +1,4 @@
-import { SET_FAVORITES, SAMPLE_ERROR, SET_LIST_CHARACTERS } from "../types";
+import { ADD_FAVORITE, SAMPLE_ERROR, SET_LIST_CHARACTERS } from "../types";
 
 const initialState = {
     favorites: [],
@@ -7,10 +7,10 @@ const initialState = {
 
 const homeReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_FAVORITES:
+        case ADD_FAVORITE:
             return {
                 ...state,
-                favorites: action.payload
+                favorites: state.favorites.concat(action.payload)
             };
         case SET_LIST_CHARACTERS:
             return {

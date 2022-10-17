@@ -1,4 +1,4 @@
-import { SAMPLE_ERROR, SET_FAVORITES, SET_LIST_CHARACTERS } from "../types";
+import { SAMPLE_ERROR, ADD_FAVORITE, SET_LIST_CHARACTERS } from "../types";
 //import HomeServices from '../../modules/home/home.services'
 
 export const setListCharacters = (data) => async (dispatch) => {
@@ -15,10 +15,10 @@ export const setListCharacters = (data) => async (dispatch) => {
   }
 };
 
-export const setFavorites = (data) => async (dispatch) => {
+export const addFavorite = (data) => async (dispatch) => {
   try {
     dispatch({
-      type: SET_FAVORITES,
+      type: ADD_FAVORITE,
       payload: data,
     });
   } catch (error) {

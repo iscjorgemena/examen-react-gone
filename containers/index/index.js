@@ -7,7 +7,7 @@ import Helpers from "../../utils/helpers";
 import { Spin } from 'antd';
 import Card from "./components/card";
 import { useDispatch, useSelector } from "react-redux";
-import { setListCharacters, setFavorites } from "../../store/actions/homeAction";
+import { setListCharacters } from "../../store/actions/homeAction";
 
 const Index = () => {
 
