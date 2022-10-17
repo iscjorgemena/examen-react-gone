@@ -46,11 +46,12 @@ const FormAdd = (props) => {
                 await CharactersServices
                     .save(data)
                     .then(() => {
-                        Helpers.showNotification('success', 'Accion exitosa', 'El personaje se guardo correctamente', 5000);
+                        Helpers.showNotification('success', 'Accion exitosa', 'El personaje se guardo correctamente', 5);
+                        initialData();
                         closeModal();
                     }).catch(error => {
                         console.log(error);
-                        Helpers.showNotification('error', 'Ha ocurrido un error', 'Vuelve a intentarlo', 5000);
+                        Helpers.showNotification('error', 'Ha ocurrido un error', 'Vuelve a intentarlo', 5);
                     })
                 setSavingData(false);
             })

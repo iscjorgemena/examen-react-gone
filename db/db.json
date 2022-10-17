@@ -560,6 +560,56 @@
       "hogwartsStudent": true,
       "hogwartsStaff": false,
       "id": 2
+    },
+    {
+      "name": "Jorge Mena",
+      "dateOfBirth": "06-07-1988",
+      "eyeColour": "Negros",
+      "hairColour": "Negro",
+      "gender": "female",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "id": 3
+    },
+    {
+      "name": "Jorge Mena",
+      "dateOfBirth": "06-07-1988",
+      "eyeColour": "Negros",
+      "hairColour": "Negro",
+      "gender": "female",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "id": 4
+    },
+    {
+      "name": "Reportes",
+      "dateOfBirth": "06-07-1988",
+      "eyeColour": "Negros",
+      "hairColour": "Negro",
+      "gender": "male",
+      "hogwartsStudent": false,
+      "hogwartsStaff": true,
+      "id": 5
+    },
+    {
+      "name": "Reportes",
+      "dateOfBirth": "",
+      "eyeColour": "",
+      "hairColour": "Negro",
+      "gender": "female",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "id": 6
+    },
+    {
+      "name": "Reportes",
+      "dateOfBirth": "06-07-1988",
+      "eyeColour": "Negros",
+      "hairColour": "Negro",
+      "gender": "male",
+      "hogwartsStudent": false,
+      "hogwartsStaff": true,
+      "id": 7
     }
   ]
 }
