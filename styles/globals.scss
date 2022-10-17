@@ -35,10 +35,31 @@ a {
   box-sizing: border-box;
 }
 
+//Clases auxiliares
+.mb-94 {
+  margin-bottom: 94px;
+}
+
+.mb-31 {
+  margin-bottom: 31px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.pb-142 {
+  padding-top: 142px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 header {
   width   : 80%;
   position: fixed;
-  z-index: 1000;
+  z-index : 1000;
 
   .menu {
     display        : flex;
@@ -85,10 +106,10 @@ header {
   }
 }
 
+//Contenedor de todo el sitio
 .container {
   width              : 100%;
   height             : auto;
-  min-height         : 10000px;
   background-color   : $bg-color;
   background-image   : url($bg-image);
   background-repeat  : no-repeat;
@@ -103,6 +124,7 @@ header {
     /* or inline-flex */
 }
 
+
 .flex-container-data-card {
   display: flex;
   width  : 100%;
@@ -116,28 +138,13 @@ header {
   margin: 10px;
 }
 
-.mb-94 {
-  margin-bottom: 94px;
-}
-
-.mb-31 {
-  margin-bottom: 31px;
-}
-
-.mb-64 {
-  margin-bottom: 64px;
-}
-
-.pb-142 {
-  padding-top: 142px;
-}
-
 .label-filter {
   font-weight: 700;
   font-size  : 36px;
   color      : #fff;
 }
 
+//Estilos para los botones
 button {
   text-transform: uppercase !important;
   font-weight   : bold;
@@ -172,6 +179,8 @@ button {
   color           : $color-buttons;
 }
 
+
+//Estilos para las tarjetas
 .list-card {
   margin         : auto;
   width          : 70%;
@@ -185,7 +194,7 @@ button {
 
   .item-card {
     width        : 520px;
-    height       : 265px;
+    height       : auto;
     background   : #FFFFFF;
     border       : 1px solid #000000;
     border-radius: 16px;
@@ -255,6 +264,7 @@ button {
   }
 }
 
+//Estilos para ajustes del modal
 .ant-modal-content {
   border-radius: 10px !important;
 }
@@ -326,35 +336,66 @@ button {
       border-bottom: 1px solid #263238;
       color        : #000;
     }
-
-
-    input[type='radio'] {
-      color           : #0E4DA4;
-      background-color: #0E4DA4;
-      border-color    : #0E4DA4;
-    }
-
-    input[type='radio']:after {
-      color           : #0E4DA4;
-      background-color: #0E4DA4;
-    }
-
-    input[type='radio']:checked:after {
-      color           : #0E4DA4;
-      background-color: #0E4DA4;
-      border-color    : #0E4DA4;
-    }
   }
 }
 
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+
+//Mobile
+
+@media (max-width: 476px) {
+  .list-card {
+    width: 95%;
+
+    .item-card {
+      flex-direction: column;
+      flex          : 1 1;
+      width         : 140px;
+      height        : auto;
+      border-radius : 5px;
+      padding-bottom: 10px;
+
+      .image {
+        width          : 100%;
+        border-radius  : 5px 5px 0px 0px;
+        height         : 130px;
+        //padding      : 2px 0px 2px 0px;
+
+        img {
+          flex      : 1 1 auto;
+          min-height: 0px !important;
+          width     : 100px !important;
+          height    : 100px !important;
+        }
+      }
+
+
+      .data {
+        width: 100%;
+      }
+    }
+
+    .item-card:nth-child(2n) {
+      margin-left: 12px;
+    }
   }
 
-  body {
-    color     : white;
-    background: black;
+  header {
+    bottom: 0px;
+    width : 100%;
+
+    .menu {
+      justify-content: center;
+
+      .favorites {
+        width        : 50%;
+        border-radius: 10px 0px 0px 0px;
+      }
+
+      .add-content {
+        width        : 50%;
+        border-radius: 0px 10px 0px 0px;
+      }
+    }
   }
 }

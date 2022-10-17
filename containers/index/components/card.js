@@ -35,7 +35,7 @@ const Card = (props) => {
                 <div className="general"><b>{labels.birthday}</b>: <span>{data?.dateOfBirth || 'ND'}</span></div>
                 <div className="general"><b>{labels.gender}</b>: <span>{data?.gender || 'ND'}</span></div>
                 <div className="general"><b>{labels.eyes_color}</b>: <span>{data?.eyeColour || 'ND'}</span></div>
-                <div className="general"><b>{labels.hair_color}</b>: <span>{data?.hairColour || 'ND'}</span></div>
+                <div className="general mb-10"><b>{labels.hair_color}</b>: <span>{data?.hairColour || 'ND'}</span></div>
             </div>
         </div>
     )
