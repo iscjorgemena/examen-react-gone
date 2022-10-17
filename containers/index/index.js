@@ -62,7 +62,7 @@ const Index = () => {
 
     return (
         <Layout >
-            <div className="flex-container mb-31 mt-142">
+            <div className="flex-container mb-31">
                 <div className="item"><Image src="/images/logo.png" alt="Picture of the author" width={194} height={66} /></div>
             </div>
             <div className="flex-container mb-64">

@@ -36,7 +36,9 @@ a {
 }
 
 header {
-  width: 80%;
+  width   : 80%;
+  position: fixed;
+  z-index: 1000;
 
   .menu {
     display        : flex;
@@ -56,12 +58,16 @@ header {
         color      : #fff;
         font-weight: 600;
       }
+
+      .icon-mark {
+        margin-top: 1px !important;
+      }
     }
 
     .add-content {
       width           : 140px;
       height          : auto;
-      padding         : 6px 0px;
+      padding         : 8px 0px;
       border-radius   : 0px 0px 10px 0px;
       background-color: #6B63B5;
       text-align      : center;
@@ -70,6 +76,10 @@ header {
       a {
         color      : #fff;
         font-weight: 600;
+      }
+
+      .icon-add {
+        margin-top: 1px !important;
       }
     }
   }
@@ -118,8 +128,8 @@ header {
   margin-bottom: 64px;
 }
 
-.mt-142 {
-  margin-top: 142px;
+.pb-142 {
+  padding-top: 142px;
 }
 
 .label-filter {

@@ -2,6 +2,7 @@ import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space } from 'antd';
 import { useState } from 'react';
 import FormAdd from './formAdd';
+import Image from 'next/image'
 
 const MenuHeader = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -58,14 +59,12 @@ const MenuHeader = () => {
             <div className='favorites'>
                 <Dropdown overlay={menu}>
                     <a onClick={(e) => e.preventDefault()}>
-                        <Space>
-                            Hover me
-                        </Space>
+                        {labels.favorites} <Image className='icon-mark' src='/images/icons/bookmark_fill.png' width={16} height={16} />
                     </a>
                 </Dropdown>
             </div>
             <div className='add-content'>
-                <a onClick={() => { setOpenModal(true) }}>{labels.add}</a>
+                <a onClick={() => { setOpenModal(true) }}>{labels.add} <Image className='icon-add' src='/images/icons/user_fill_add.png' width={16} height={16} /></a>
             </div>
             <FormAdd openModal={openModal} closeModal={closeModal} />
         </div>
