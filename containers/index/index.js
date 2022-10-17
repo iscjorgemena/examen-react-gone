@@ -62,15 +62,18 @@ const Index = () => {
 
     return (
         <Layout >
-            <div className="flex-container">
+            <div className="flex-container mb-31 mt-142">
                 <div className="item"><Image src="/images/logo.png" alt="Picture of the author" width={194} height={66} /></div>
             </div>
-            <div className="flex-container">
+            <div className="flex-container mb-64">
+                <b className="label-filter">Selecciona tu filtro</b>
+            </div>
+            <div className="flex-container mb-94">
                 <div className="item">
-                    <Button className='btn-active' label={'estudiantes'} onClick={() => { setTypeList('students') }} />
+                    <Button className={typeList === 'students' ? 'btn-active' : ''} label={'estudiantes'} onClick={() => { setTypeList('students') }} />
                 </div>
                 <div className="item">
-                    <Button label={'staff'} onClick={() => { setTypeList('staff') }} />
+                    <Button className={typeList === 'staff' ? 'btn-active' : ''} label={'staff'} onClick={() => { setTypeList('staff') }} />
                 </div>
             </div>
             <div className="flex-container">
