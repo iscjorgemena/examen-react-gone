@@ -1,7 +1,7 @@
 import { SAMPLE_ERROR, SET_FAVORITES, SET_LIST_CHARACTERS } from "../types";
 //import HomeServices from '../../modules/home/home.services'
 
-export const setListaCharacters = (data) => async (dispatch) => {
+export const setListCharacters = (data) => async (dispatch) => {
   try {
     dispatch({
       type: SET_LIST_CHARACTERS,

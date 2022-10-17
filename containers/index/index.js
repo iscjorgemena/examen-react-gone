@@ -6,12 +6,18 @@ import CharactersServices from "../../services/characters.services";
 import Helpers from "../../utils/helpers";
 import { Spin } from 'antd';
 import Card from "./components/card";
+import { useDispatch, useSelector } from "react-redux";
+import { setListCharacters, setFavorites } from "../../store/actions/homeAction";
 
 const Index = () => {
 
-    const [List, setList] = useState([]);
+    //const [List, setList] = useState([]);
     const [loadingData, setLoadingData] = useState(true);
     const [typeList, setTypeList] = useState('')
+
+    const dispatch = useDispatch();
+    const homeData = useSelector((state) => state.homeData);
+    const { list_characters } = homeData;
 
     useEffect(() => {
         getList(typeList)
@@ -29,7 +35,7 @@ const Index = () => {
         let params = generateParams(type_list);
         await CharactersServices.get(params)
             .then(response => {
-                setList(response.data);
+                dispatch(setListCharacters(response.data));
             })
             .catch(error => {
                 console.log(error);
@@ -83,7 +89,7 @@ const Index = () => {
                     </div>
                     :
                     <div className="list-card">
-                        {List.map((data, index) => {
+                        {list_characters.map((data, index) => {
                             return <Card key={index} data={data} />
                         })}
                     </div>
