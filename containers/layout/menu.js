@@ -1,7 +1,7 @@
 import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space } from 'antd';
 import { useState } from 'react';
-import FormAdd from './formAdd';
+import FormAdd from '../index/components/formAdd';
 import Image from 'next/image'
 
 const MenuHeader = () => {

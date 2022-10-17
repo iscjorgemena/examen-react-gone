@@ -1,4 +1,4 @@
-import MenuHeader from "../index/components/menu";
+import MenuHeader from "./menu";
 
 const Header = (props) => {
 
