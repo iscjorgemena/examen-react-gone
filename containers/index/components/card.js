@@ -7,8 +7,8 @@ const Card = (props) => {
     let { data } = props;
 
     const dispatch = useDispatch();
-    /* const homeData = useSelector((state) => state.homeData);
-    const { favorites } = homeData; */
+    const homeData = useSelector((state) => state.homeData);
+    const { favorites } = homeData;
 
     //Labeles para la informacion de la tarjeta
     let labels = {
@@ -39,6 +39,21 @@ const Card = (props) => {
         return <>{alive === true ? labels.alive : labels.dead} / {hogwartsStudent === true ? labels.student : labels.staff}</>
     }
 
+    const generateButtonFavorite = (id) => {
+
+        const found = favorites.find(element => element.id == id);
+
+        if (typeof found == 'undefined') {
+            return (
+                <a onClick={() => { saveFavorite(data) }}>
+                    <Image src='/images/icons/bookmark.png' width={20} height={22} />
+                </a>
+            )
+        } else {
+            return (<Image src='/images/icons/bookmark_fill_select.png' width={20} height={22} />)
+        }
+    }
+
     return (
         <div className="item-card">
             <div className={`image image-${data.house}`}>
@@ -48,9 +63,7 @@ const Card = (props) => {
                 <div className="flex-container-data-card">
                     <div className="status">{generateStatus(data.hogwartsStudent, data.alive)}</div>
                     <div>
-                        <a onClick={() => { saveFavorite(data) }}>
-                            <Image src='/images/icons/bookmark.png' width={20} height={22} />
-                        </a>
+                        {generateButtonFavorite(data.id)}
                     </div>
                 </div>
                 <div className="name">{data.name}</div>
