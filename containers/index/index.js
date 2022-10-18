@@ -76,10 +76,10 @@ const Index = () => {
             </div>
             <div className="flex-container mb-94">
                 <div className="item">
-                    <Button className={typeList === 'students' ? 'btn-active' : ''} label={'estudiantes'} onClick={() => { setTypeList('students') }} disabled={false} />
+                    <Button className={typeList === 'students' ? 'btn-active btn-students' : 'btn-students'} label={'estudiantes'} onClick={() => { setTypeList('students') }} disabled={false} />
                 </div>
                 <div className="item">
-                    <Button className={typeList === 'staff' ? 'btn-active' : ''} label={'staff'} onClick={() => { setTypeList('staff') }} disabled={false} />
+                    <Button className={typeList === 'staff' ? 'btn-active btn-staff' : 'btn-staff'} label={'staff'} onClick={() => { setTypeList('staff') }} disabled={false} />
                 </div>
             </div>
             <div className="flex-container">
