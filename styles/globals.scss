@@ -59,7 +59,7 @@ a {
 
 header {
   width   : 80%;
-  position: fixed;
+  position: relative;
   z-index : 1000;
 
   .menu {
@@ -71,7 +71,7 @@ header {
 
     .favorites {
       position        : relative;
-      z-index         : 2;
+      z-index         : 1;
       width           : 140px;
       height          : auto;
       border-radius   : 0px 0px 0px 10px;
@@ -439,8 +439,9 @@ button {
 
   //Estilos para el menu
   header {
-    bottom: 0px;
-    width : 100%;
+    bottom  : 0px;
+    width   : 100%;
+    position: fixed;
 
     .menu {
       justify-content: center;
