@@ -6,8 +6,8 @@ const Card = (props) => {
     let { data } = props;
 
     const dispatch = useDispatch();
-    const homeData = useSelector((state) => state.homeData);
-    const { favorites } = homeData;
+    /* const homeData = useSelector((state) => state.homeData);
+    const { favorites } = homeData; */
 
     //Labeles para la informacion de la tarjeta
     let labels = {

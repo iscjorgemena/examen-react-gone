@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, SAMPLE_ERROR, SET_LIST_CHARACTERS } from "../types";
+import { ADD_FAVORITE, REMOVE_FAVORITE, SAMPLE_ERROR, SET_LIST_CHARACTERS } from "../types";
 
 const initialState = {
     favorites: [],
@@ -11,6 +11,13 @@ const homeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 favorites: state.favorites.concat(action.payload)
+            };
+        case REMOVE_FAVORITE:
+            //El payload recibe el id a remover
+            let id = action.payload;
+            return {
+                ...state,
+                favorites: state.favorites.filter((element) => element.id !== id)
             };
         case SET_LIST_CHARACTERS:
             return {

@@ -4,6 +4,8 @@ import { useState } from 'react';
 import FormAdd from '../index/components/formAdd';
 import Image from 'next/image'
 import { useDispatch, useSelector } from "react-redux";
+import { removeFavorite } from "../../store/actions/homeAction";
+import { useEffect } from "react";
 
 
 const MenuHeader = () => {
@@ -12,9 +14,20 @@ const MenuHeader = () => {
     const homeData = useSelector((state) => state.homeData);
     const { favorites } = homeData;
 
+    useEffect(() => {
+        return () => {
+            // clean up
+        };
+    }, []);
+
     const labels = {
         favorites: 'Favoritos',
         add: 'Agregar'
+    }
+
+    const removeFavoriteAction = (id) => {
+        console.log(id);
+        dispatch(removeFavorite(id));
     }
 
     const generateItemsMenu = () => {
@@ -25,12 +38,11 @@ const MenuHeader = () => {
                     <div className='item-favorite'>
                         <div className='image'><Image src={favorite.image} width={34} height={34} /></div>
                         <div className='name'>{favorite.name}</div>
-                        <div className='trash'><Image src='/images/icons/trash.png' width={24} height={24} /></div>
+                        <div className='trash'><a onClick={() => { removeFavoriteAction(favorite.id) }}><Image src='/images/icons/trash.png' width={24} height={24} /></a></div>
                     </div>
                 ),
             }
         })
-        console.log(items);
         return (<>
             <Menu className='menu-favorites'
                 items={items}
