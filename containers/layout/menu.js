@@ -58,7 +58,7 @@ const MenuHeader = () => {
     return (
         <div className='menu'>
             <div className='favorites'>
-                <Dropdown overlay={generateItemsMenu}>
+                <Dropdown overlay={generateItemsMenu} placement="top">
                     <a onClick={(e) => e.preventDefault()}>
                         {labels.favorites} <Image className='icon-mark' src='/images/icons/bookmark_fill.png' width={16} height={16} />
                     </a>
