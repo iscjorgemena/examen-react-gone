@@ -20,12 +20,12 @@ const MenuHeader = () => {
     const generateItemsMenu = () => {
         let items = favorites.map((favorite, index) => {
             return {
-                key: favorite.id,
+                key: index,
                 label: (
-                    <div>
-                        <div><Image src={favorite.image} width={34} height={34} /></div>
-                        <div>{favorite.name}</div>
-                        <div><Image src='/images/icons/trash.png' width={24} height={24} /></div>
+                    <div className='item-favorite'>
+                        <div className='image'><Image src={favorite.image} width={34} height={34} /></div>
+                        <div className='name'>{favorite.name}</div>
+                        <div className='trash'><Image src='/images/icons/trash.png' width={24} height={24} /></div>
                     </div>
                 ),
             }
