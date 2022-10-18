@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useDispatch, useSelector } from "react-redux";
 import { removeFavorite } from "../../store/actions/homeAction";
 import { useEffect } from "react";
+import Helpers from '../../utils/helpers';
 
 
 const MenuHeader = () => {
@@ -26,8 +27,8 @@ const MenuHeader = () => {
     }
 
     const removeFavoriteAction = (id) => {
-        console.log(id);
         dispatch(removeFavorite(id));
+        Helpers.showNotification('success', 'Eliminado Correctamente', 'Personaje eliminado de tus favoritos', 5)
     }
 
     const generateItemsMenu = () => {

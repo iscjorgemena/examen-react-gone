@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite } from "../../../store/actions/homeAction";
+import Helpers from "../../../utils/helpers";
 
 const Card = (props) => {
     let { data } = props;
@@ -24,6 +25,7 @@ const Card = (props) => {
 
     const saveFavorite = (data) => {
         dispatch(addFavorite(data));
+        Helpers.showNotification('success', 'Agregado Correctamente', 'Personaje agregado a tus favoritos', 5)
     }
 
     /**
