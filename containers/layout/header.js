@@ -1,9 +1,10 @@
+import MenuHeader from "./menu";
 
 const Header = (props) => {
 
     return (
         <header>
-           header
+            <MenuHeader />
         </header>
     )
 }

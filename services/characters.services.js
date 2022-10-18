@@ -11,5 +11,10 @@ const CharactersServices = {
         const response = await API.get(url_module, { params: params });
         return response;
     },
+
+    save: async (data) => {
+        const response = await API.post(url_module, data);
+        return response;
+    },
 };
 export default CharactersServices;
