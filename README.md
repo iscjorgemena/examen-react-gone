@@ -1,6 +1,6 @@
 # examen-react-gone
 
-## Instrucciones para levantar el proyecto (Despues de Clonar)
+## Instrucciones para levantar el proyecto y hacer pruebas (Despues de Clonar)
 1.- Iniciar el json server en una terminal: json-server --watch db/db.json --port 3001
 
 2.- En otro terminal dentro de la raiz del proyecto copiar el ".env.example" a .env, dejar el archivo tal cual
